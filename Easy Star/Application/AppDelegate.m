@@ -19,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Set the default Realm to the one with preloaded data from GTFS format
+    
     [[ESStaticsDataManager sharedInstance] changeDefaultRealmPath];
  
     [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName :[UIFont fontWithName:@"MavenProLight300-Regular" size:22.0],

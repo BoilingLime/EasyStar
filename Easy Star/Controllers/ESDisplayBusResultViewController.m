@@ -152,7 +152,7 @@
     NSString *formattedString;
     
     if (minutes < 60) {
-        formattedString = [NSString stringWithFormat:@"%ld minutes", minutes];
+        formattedString = [NSString stringWithFormat:@"%ld minutes", (minutes < 0 ? 0 : minutes)];
     } else {
         NSCalendar *calendar = [NSCalendar currentCalendar];
         NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:date];
